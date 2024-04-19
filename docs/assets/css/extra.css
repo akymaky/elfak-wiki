@@ -1,0 +1,40 @@
+html {
+    overflow-x: hidden;
+}
+
+p:not([class]) {
+    text-indent: 2rem;
+}
+
+strong > code {
+    background-color: hsl(0, 40%, 75%) !important;
+}
+
+del > strong > code {
+    color:hsl(0, 100%, 50%) !important;
+}
+
+del > code {
+    color: hsl(0, 100%, 75%) !important;
+}
+
+.diag-40 {
+    width: 40%;
+}
+
+.diag-50 {
+    width: 50%;
+}
+
+.diag-60 {
+    width: 60%;
+}
+
+[data-md-color-scheme="elfak"] {
+	--md-primary-fg-color: #154d7c;
+}
+  
+
+.katex-html {
+	white-space: nowrap;
+}

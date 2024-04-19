@@ -1,0 +1,153 @@
+.discord-invite {
+	position: relative;
+	display: flex;
+	flex-direction: column  ;
+	background-color: #2b2d31;
+	color: #b5bac1;
+	overflow: hidden;
+	border-radius: .25rem;
+	gap: .5rem;
+	padding: 1rem;
+	user-select: none;
+	cursor: default;
+	max-width: 24rem;
+	isolation: isolate;
+	margin-inline: auto;
+}
+
+.discord-invite::before {
+	content: "Invite is loading...";
+	position: absolute;
+	inset: 0;
+	background-color: inherit;
+	margin: auto;
+	z-index: 999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: 400;
+	animation: pulse 500ms ease infinite alternate;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+.discord-invite[data-loading="true"]::before {
+	opacity: 1;
+	visibility: visible;
+}
+
+@keyframes pulse {
+	to {
+		color: #b5bac1b0;
+	}
+}
+
+.discord-invite > h5 {
+	margin: 0;
+	color: #b5bac1;
+}
+
+.discord-invite > div {
+	display: flex;
+	flex-direction: row;
+	gap: .5rem;
+}
+
+.discord-invite > div > [data-row] {
+	display: flex;
+	flex-direction: row;
+	gap: inherit;
+	flex: 1;
+}
+
+.discord-invite [data-name] {
+	color: #f2f3f5;
+}
+
+.discord-invite [data-icon] {
+	width: 50px;
+	height: 50px;
+	border-radius: 15px;
+	object-fit: cover;
+}
+
+.discord-invite small {
+	display: flex;
+	flex-direction: row;
+	flex: 0 1 auto;
+	gap: .5rem;
+}
+
+
+.discord-invite small > span {
+	display: flex;
+	flex-direction: row;
+	gap: .1rem;
+	white-space: nowrap;
+	flex: 0 0 auto;
+}
+
+.discord-invite [data-presence-count],
+.discord-invite [data-total-count] {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	white-space: nowrap;
+	gap: .1rem
+}
+
+.discord-invite [data-presence-count]::before,
+.discord-invite [data-total-count]::before {
+	content: "";
+	display: inline-block;
+	border-radius: 50%;
+	height: .5em;
+	aspect-ratio: 1 / 1;
+	margin-right: .1rem;
+}
+
+.discord-invite [data-presence-count]::before {
+	background-color: #23a559;
+}
+
+.discord-invite [data-total-count]::before {
+	background-color: #80848e;
+}
+
+.discord-invite [data-join],
+.discord-invite [data-join]:hover,
+.discord-invite [data-join]:active,
+.discord-invite [data-join]:visited {
+	color: #ffffff;
+}
+
+.discord-invite [data-join] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: .5rem 1rem;
+	font-size: .75rem;
+	background-color: #248046;
+	border-radius: .25rem;
+	transition: background-color 250ms ease;
+}
+
+
+
+.discord-invite [data-join]:hover {
+	background-color: #1a6334;
+}
+
+.discord-invite [data-join]:active {
+	background-color: #15562b;
+}
+
+@media (max-width: 420px) {
+	.discord-invite > div {
+		flex-direction: column;
+
+	}
+}

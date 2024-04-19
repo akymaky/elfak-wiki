@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "elfak-wiki"
+version = "0.1.0"
+description = ""
+authors = ["Aky Maky <akymaky@tuta.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.13"
+mkdocs-minify-plugin = "^0.8.0"
+mkdocs-glightbox = "^0.3.7"
+pygments-arm = "^0.7.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

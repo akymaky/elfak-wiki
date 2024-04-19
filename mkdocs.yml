@@ -1,0 +1,175 @@
+site_name: Елфак вики
+site_description: Незванична вики страница Електронског факултета, Универзитета у Нишу
+site_url: https://elfak.akymaky.me
+site_author: akymaky
+repo_url: https://github.com/akymaky/elfak-wiki
+repo_name: akymaky/elfak-wiki
+theme:
+  name: material
+  custom_dir: overrides
+  language: sr
+  logo: assets/icon.png
+  icon:
+    repo: simple/github
+  palette: 
+    scheme: elfak
+  features:
+    - navigation.prune
+    - navigation.sections
+    - navigation.indexes 
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - content.code.annotate
+    - content.code.copy
+    - toc.follow
+
+hooks:
+  - ./hooks/apple_emoji.py
+
+plugins:
+  - search
+  - glightbox
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.saneheaders
+  - pymdownx.blocks.admonition:
+      types:
+      - new
+      - settings
+      - note
+      - abstract
+      - info
+      - tip
+      - success
+      - question
+      - warning
+      - failure
+      - danger
+      - bug
+      - example
+      - quote
+  - pymdownx.blocks.details
+  - pymdownx.blocks.html
+  - pymdownx.blocks.definition
+  - pymdownx.blocks.tab:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+
+extra_css:
+  - assets/css/extra.css
+  - assets/css/discord-invite.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+extra_javascript:
+  - assets/js/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - assets/js/analytics.js
+  - /_vercel/insights/script.js
+
+
+extra:
+  generator: true
+  social:
+    - icon: simple/discord
+      link: https://discord.gg/xf8DEHqcKK
+    - icon: simple/github
+      link: https://github.com/akymaky
+    - icon: simple/linkedin
+      link: https://linkedin.com/in/akymaky
+    - icon: simple/instagram
+      link: https://instagram.com/aky.maky
+
+nav:
+  - Преглед: index.md
+  - Прва година:
+    - Предмети: prva/index.md
+    - УУР:
+      - Преглед: prva/uur/index.md
+      - Лаб. вежбе:
+        - Прва вежба: prva/uur/1.md
+        - Друга вежба: prva/uur/2.md
+        - Трећа вежба: prva/uur/3.md
+        - Четврта вежба: prva/uur/4.md
+        - Пета вежба: prva/uur/5.md
+    - АИП:
+      - Преглед: prva/aip/index.md
+      - Прва вежба: prva/aip/1.md
+      - Друга вежба: prva/aip/2.md
+      - Трећа вежба: prva/aip/3.md
+      - Четврта вежба: prva/aip/4.md
+      - Пета вежба: prva/aip/5.md
+      - Шеста вежба: prva/aip/6.md
+  - ЕЛК:
+    - Преглед: elk/index.md
+    - ООП:
+      - Преглед: elk/oop/index.md
+      - Лаб. вежбе:
+        - Прва вежба: elk/oop/lab/1.md
+        - Друга вежба: elk/oop/lab/2.md
+        - Трећа вежба: elk/oop/lab/3.md
+        - Четврта вежба: elk/oop/lab/4.md
+        - Пета вежба: elk/oop/lab/5.md
+    - СИС: elk/sis/index.md
+  - РИ:
+    - ООП:
+      - Преглед: ri/oop/index.md
+      - Лаб. вежбе:
+        - Прва вежба: ri/oop/lab/1.md
+        - Друга вежба: ri/oop/lab/2.md
+        - Трећа вежба: ri/oop/lab/3.md
+        - Четврта вежба: ri/oop/lab/4.md
+        - Пета вежба: ri/oop/lab/5.md
