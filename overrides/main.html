@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+	{{ super() }}
+	<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ba36f91f7bc8433cac2df0662a3b32c1"}'></script>
+{% endblock %}

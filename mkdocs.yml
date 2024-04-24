@@ -118,7 +118,6 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
   - assets/js/analytics.js
-  - /_vercel/insights/script.js
 
 
 extra:
