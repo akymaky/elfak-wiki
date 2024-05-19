@@ -18,6 +18,13 @@ del > code {
     color: hsl(0, 100%, 75%) !important;
 }
 
+.diag-40,
+.diag-50,
+.diag-60,
+.diag-80 {
+	margin-inline: auto;
+}
+
 .diag-40 {
     width: 40%;
 }
@@ -28,6 +35,10 @@ del > code {
 
 .diag-60 {
     width: 60%;
+}
+
+.diag-80 {
+	width: 80%;
 }
 
 [data-md-color-scheme="elfak"] {
