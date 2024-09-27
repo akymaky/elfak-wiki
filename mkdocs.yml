@@ -11,12 +11,25 @@ theme:
   logo: assets/icon.png
   icon:
     repo: simple/github
-  palette: 
-    scheme: elfak
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: elfak
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
   features:
     - navigation.prune
     - navigation.sections
-    - navigation.indexes 
+    - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
     - navigation.tabs
@@ -87,26 +100,27 @@ markdown_extensions:
   - pymdownx.saneheaders
   - pymdownx.blocks.admonition:
       types:
-      - new
-      - settings
-      - note
-      - abstract
-      - info
-      - tip
-      - success
-      - question
-      - warning
-      - failure
-      - danger
-      - bug
-      - example
-      - quote
+        - new
+        - settings
+        - note
+        - abstract
+        - info
+        - tip
+        - success
+        - question
+        - warning
+        - failure
+        - danger
+        - bug
+        - example
+        - quote
   - pymdownx.blocks.details
   - pymdownx.blocks.html
   - pymdownx.blocks.definition
   - pymdownx.blocks.tab:
       alternate_style: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      slugify:
+        !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
 
 extra_css:
   - assets/css/extra.css
@@ -118,7 +132,6 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
   - assets/js/analytics.js
-
 
 extra:
   generator: true
@@ -135,40 +148,40 @@ extra:
 nav:
   - Преглед: index.md
   - Прва година:
-    - Предмети: prva/index.md
-    - УУР:
-      - Преглед: prva/uur/index.md
-      - Лаб. вежбе:
-        - Прва вежба: prva/uur/1.md
-        - Друга вежба: prva/uur/2.md
-        - Трећа вежба: prva/uur/3.md
-        - Четврта вежба: prva/uur/4.md
-        - Пета вежба: prva/uur/5.md
-    - АИП:
-      - Преглед: prva/aip/index.md
-      - Прва вежба: prva/aip/1.md
-      - Друга вежба: prva/aip/2.md
-      - Трећа вежба: prva/aip/3.md
-      - Четврта вежба: prva/aip/4.md
-      - Пета вежба: prva/aip/5.md
-      - Шеста вежба: prva/aip/6.md
+      - Предмети: prva/index.md
+      - УУР:
+          - Преглед: prva/uur/index.md
+          - Лаб. вежбе:
+              - Прва вежба: prva/uur/1.md
+              - Друга вежба: prva/uur/2.md
+              - Трећа вежба: prva/uur/3.md
+              - Четврта вежба: prva/uur/4.md
+              - Пета вежба: prva/uur/5.md
+      - АИП:
+          - Преглед: prva/aip/index.md
+          - Прва вежба: prva/aip/1.md
+          - Друга вежба: prva/aip/2.md
+          - Трећа вежба: prva/aip/3.md
+          - Четврта вежба: prva/aip/4.md
+          - Пета вежба: prva/aip/5.md
+          - Шеста вежба: prva/aip/6.md
   - ЕЛК:
-    - Преглед: elk/index.md
-    - ООП:
-      - Преглед: elk/oop/index.md
-      - Лаб. вежбе:
-        - Прва вежба: elk/oop/lab/1.md
-        - Друга вежба: elk/oop/lab/2.md
-        - Трећа вежба: elk/oop/lab/3.md
-        - Четврта вежба: elk/oop/lab/4.md
-        - Пета вежба: elk/oop/lab/5.md
-    - СИС: elk/sis/index.md
+      - Преглед: elk/index.md
+      - ООП:
+          - Преглед: elk/oop/index.md
+          - Лаб. вежбе:
+              - Прва вежба: elk/oop/lab/1.md
+              - Друга вежба: elk/oop/lab/2.md
+              - Трећа вежба: elk/oop/lab/3.md
+              - Четврта вежба: elk/oop/lab/4.md
+              - Пета вежба: elk/oop/lab/5.md
+      - СИС: elk/sis/index.md
   - РИ:
-    - ООП:
-      - Преглед: ri/oop/index.md
-      - Лаб. вежбе:
-        - Прва вежба: ri/oop/lab/1.md
-        - Друга вежба: ri/oop/lab/2.md
-        - Трећа вежба: ri/oop/lab/3.md
-        - Четврта вежба: ri/oop/lab/4.md
-        - Пета вежба: ri/oop/lab/5.md
+      - ООП:
+          - Преглед: ri/oop/index.md
+          - Лаб. вежбе:
+              - Прва вежба: ri/oop/lab/1.md
+              - Друга вежба: ri/oop/lab/2.md
+              - Трећа вежба: ri/oop/lab/3.md
+              - Четврта вежба: ri/oop/lab/4.md
+              - Пета вежба: ri/oop/lab/5.md

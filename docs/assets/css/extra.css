@@ -42,10 +42,84 @@ del > code {
 }
 
 [data-md-color-scheme="elfak"] {
-	--md-primary-fg-color: #154d7c;
+	--md-primary-fg-color: hsl(207, 71%, 28%);
 }
-  
+
+[data-md-color-scheme="slate"] {
+	--md-primary-fg-color: hsl(207, 71%, 12%);
+	--md-default-bg-color: hsl(0, 0%, 0%);
+}
+
+[data-md-color-scheme="slate"] p img:not(.twemoji):not([src$="#no-invert"]),
+[data-md-color-scheme="slate"] .gslide-image > img:not([src$="#no-invert"]) {
+	filter: invert();
+}
 
 .katex-html {
 	white-space: nowrap;
+}
+
+.jb-c {
+	--fg: #834DF0;
+	--bg: #FAF5FF;
+}
+
+[data-md-color-scheme="slate"] .jb-c {
+	--fg: #B589EC;
+	--bg: #2F2936;
+}
+
+.jb-h {
+	--fg: #F28C35;
+	--bg: #FFF4EB;
+}
+
+[data-md-color-scheme="slate"] .jb-h {
+	--fg: #C77D55;
+	--bg: #45322B;
+}
+
+.jb-txt > rect {
+	fill: #6C707E;
+}
+
+[data-md-color-scheme="slate"] .jb-txt > rect {
+	fill: #CED0D6;
+}
+
+.jb-asm > path {
+	fill: #3574F0;
+}
+
+[data-md-color-scheme="slate"] .jb-asm > rect {
+	fill: #548AF7;
+}
+
+.jb-sh > path,
+.jb-sh > rect {
+	stroke: #6C707E;
+	fill: none;
+}
+
+.jb-sh > rect {
+	fill: #EBECF0;
+}
+
+[data-md-color-scheme="slate"] .jb-sh > path,
+[data-md-color-scheme="slate"] .jb-sh > rect {
+	stroke: #CED0D6;
+}
+
+[data-md-color-scheme="slate"] .jb-sh > rect {
+	fill: #43454A;
+}
+
+.jb-java {
+	--fg: #E66D17;
+	--bg: #FFF4EB;
+}
+
+[data-md-color-scheme="slate"] .jb-java {
+	--fg: #C77D55;
+	--bg: #45322B;
 }
