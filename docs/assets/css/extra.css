@@ -6,6 +6,14 @@ p:not([class]) {
     text-indent: 2rem;
 }
 
+p:has(.glightbox) {
+	text-indent: 0;
+}
+
+.glightbox {
+	cursor: zoom-in;
+}
+
 strong > code {
     background-color: hsl(0, 40%, 75%) !important;
 }
@@ -50,9 +58,13 @@ del > code {
 	--md-default-bg-color: hsl(0, 0%, 0%);
 }
 
-[data-md-color-scheme="slate"] p img:not(.twemoji):not([src$="#no-invert"]),
+[data-md-color-scheme="slate"] .glightbox img:not(.twemoji):not([src$="#no-invert"]),
 [data-md-color-scheme="slate"] .gslide-image > img:not([src$="#no-invert"]) {
 	filter: invert();
+}
+
+.gslide-image img {
+	background: transparent !important;
 }
 
 .katex-html {

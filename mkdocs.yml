@@ -46,10 +46,6 @@ hooks:
 plugins:
   - search
   - glightbox
-  - minify:
-      minify_html: true
-      minify_css: true
-      minify_js: true
 markdown_extensions:
   - abbr
   - admonition
@@ -119,6 +115,7 @@ markdown_extensions:
   - pymdownx.blocks.definition
   - pymdownx.blocks.tab:
       alternate_style: true
+      combine_header_slug: true
       slugify:
         !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
 
@@ -136,52 +133,61 @@ extra_javascript:
 extra:
   generator: true
   social:
-    - icon: simple/discord
+    - icon: fontawesome/brands/discord
       link: https://discord.gg/xf8DEHqcKK
-    - icon: simple/github
+    - icon: fontawesome/brands/github
       link: https://github.com/akymaky
-    - icon: simple/linkedin
+    - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/akymaky
-    - icon: simple/instagram
+    - icon: fontawesome/brands/instagram
       link: https://instagram.com/aky.maky
 
 nav:
   - Преглед: index.md
-  - Прва година:
+  - I година:
       - Предмети: prva/index.md
       - УУР:
-          - Преглед: prva/uur/index.md
-          - Лаб. вежбе:
-              - Прва вежба: prva/uur/1.md
-              - Друга вежба: prva/uur/2.md
-              - Трећа вежба: prva/uur/3.md
-              - Четврта вежба: prva/uur/4.md
-              - Пета вежба: prva/uur/5.md
+          - УУР: prva/uur/index.md
+          - Прва вежба: prva/uur/1.md
+          - Друга вежба: prva/uur/2.md
+          - Трећа вежба: prva/uur/3.md
+          - Четврта вежба: prva/uur/4.md
+          - Пета вежба: prva/uur/5.md
       - АИП:
-          - Преглед: prva/aip/index.md
+          - АИП: prva/aip/index.md
           - Прва вежба: prva/aip/1.md
           - Друга вежба: prva/aip/2.md
           - Трећа вежба: prva/aip/3.md
           - Четврта вежба: prva/aip/4.md
           - Пета вежба: prva/aip/5.md
           - Шеста вежба: prva/aip/6.md
-  - ЕЛК:
-      - Преглед: elk/index.md
+  - II година:
+      - Предмети: druga/index.md
+      - ДМ:
+          - Дискретна математика: druga/diskretna/index.md
+      - БП:
+          - Базе података: druga/baze/index.md
+          - Oracle Database Free: druga/baze/oracle-database-free.md
+          - Oracle SQLDeveloper: druga/baze/oracle-sqldeveloper.md
+          - Прва вежба: druga/baze/1.md
+          - Друга вежба: druga/baze/2.md
+          - Трећа вежба: druga/baze/3.md
+          - Четврта вежба: druga/baze/4.md
+          - Пета вежба: druga/baze/5.md
+          - Шеста вежба: druga/baze/6.md
       - ООП:
-          - Преглед: elk/oop/index.md
-          - Лаб. вежбе:
-              - Прва вежба: elk/oop/lab/1.md
-              - Друга вежба: elk/oop/lab/2.md
-              - Трећа вежба: elk/oop/lab/3.md
-              - Четврта вежба: elk/oop/lab/4.md
-              - Пета вежба: elk/oop/lab/5.md
-      - СИС: elk/sis/index.md
-  - РИ:
-      - ООП:
-          - Преглед: ri/oop/index.md
-          - Лаб. вежбе:
-              - Прва вежба: ri/oop/lab/1.md
-              - Друга вежба: ri/oop/lab/2.md
-              - Трећа вежба: ri/oop/lab/3.md
-              - Четврта вежба: ri/oop/lab/4.md
-              - Пета вежба: ri/oop/lab/5.md
+          - ООП: druga/oop/index.md
+          - Прва вежба: druga/oop/1.md
+          - Друга вежба: druga/oop/2.md
+          - Трећа вежба: druga/oop/3.md
+          - Четврта вежба: druga/oop/4.md
+          - Пета вежба: druga/oop/5.md
+      - АОР1:
+          - АОР1: druga/aor1/index.md
+      - ЛП:
+          - ЛП: druga/lp/index.md
+          - Прва вежба: druga/lp/1.md
+          - Друга вежба: druga/lp/2.md
+          - Трећа вежба: druga/lp/3.md
+          - Четврта вежба: druga/lp/4.md
+          - Пета вежба: druga/lp/5.md
